@@ -850,6 +850,92 @@ footer {
 
 }
 
+
+/* =========================================================
+   2026 VISUAL REFRESH — cleaner, student-built product feel
+   Keeps the original HTML/JS functionality intact.
+========================================================= */
+:root {
+  --bg: #0b0e14;
+  --bg-light: #111620;
+  --card: #151b25;
+  --primary: #7dd3fc;
+  --secondary: #a7f3d0;
+  --success: #86efac;
+  --warning: #fde68a;
+  --danger: #fda4af;
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --line: #272d38;
+}
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+body::before { display:none; }
+nav {
+  max-width: 1180px; margin: 18px auto 0; width: calc(100% - 36px);
+  padding: 13px 18px; background: rgba(11,14,20,.94);
+  border: 1px solid var(--line); border-radius: 14px; backdrop-filter: blur(8px);
+}
+.logo {font-size:1.05rem; letter-spacing:.04em; font-weight:800;}
+.logo span {color:var(--primary);}
+.nav-links {gap:8px;}
+.nav-links a {font-size:.9rem; color:#c4c7ce; padding:8px 10px; border-radius:8px;}
+.nav-links a:hover {background:#171c26; color:white;}
+.xp-mini {background:#151b25; border:1px solid var(--line); border-radius:9px; color:#d9f4ff; padding:7px 11px; font-size:.86rem;}
+section {padding:76px max(6%, calc((100vw - 1120px)/2));}
+.section-title {text-align:left; margin-bottom:30px; max-width:720px;}
+.section-title h2 {font-size:clamp(1.8rem,4vw,2.6rem); line-height:1.15; letter-spacing:-.035em; margin-bottom:10px;}
+.section-title p {margin:0; max-width:620px; font-size:1rem;}
+.hero {min-height:auto; justify-content:flex-start; text-align:left; padding-top:110px; padding-bottom:110px;}
+.hero-content {max-width:800px;}
+.hero-badge {border-radius:7px; background:#121923; border:1px solid #253040; color:#b8dff3; padding:7px 10px; font-size:.82rem; margin-bottom:22px;}
+.hero h1 {font-size:clamp(3.2rem,9vw,6.8rem); letter-spacing:-.07em; line-height:.86; color:#fff; background:none; margin-bottom:28px;}
+.hero p {margin:0; max-width:650px; font-size:1.12rem; color:#b1b5bd;}
+.hero-buttons {justify-content:flex-start; margin-top:30px;}
+.btn {border-radius:8px; padding:11px 17px; font-size:.92rem; font-weight:700; transition:.15s ease;}
+.btn-primary {background:#e8f6ff; color:#10151c; box-shadow:none;}
+.btn-primary:hover {transform:translateY(-1px); box-shadow:none; background:white;}
+.btn-secondary {background:#141922; border:1px solid #303744; color:#e4e4e7;}
+.btn-secondary:hover {border-color:#555f70; background:#1a202b;}
+.module-grid {gap:16px;}
+.card, .learning-box, .stat-card, .badge {background:#121720; border:1px solid var(--line); box-shadow:none;}
+.card {border-radius:12px; padding:24px; transition:.15s ease;}
+.card:hover {transform:translateY(-2px); border-color:#3a4352;}
+.module-icon {font-size:1.6rem; margin-bottom:28px;}
+.card h3 {font-size:1.12rem; margin-bottom:8px;}
+.card p {font-size:.93rem; margin-bottom:16px;}
+.xp-reward {font-size:.82rem; color:#9ee6ba; font-weight:700;}
+.learning-box {border-radius:12px; padding:30px; margin:18px 0; max-width:900px;}
+.learning-box h3 {color:#f4f4f5; font-size:1.12rem;}
+.quiz-option {border-radius:8px; border:1px solid #2b3340; background:#171c25; padding:13px 14px; font-size:.94rem;}
+.quiz-option:hover {border-color:#566276; background:#1b222d;}
+textarea {border-radius:8px; background:#0d1118; border:1px solid #303744; font-family:inherit;}
+.scenario {background:#171c25; border:1px solid #2b3340; border-left:3px solid #70849e; border-radius:8px;}
+.dashboard {max-width:1000px; margin:0;}
+.dashboard-top {gap:16px;}
+.stat-card {border-radius:12px; padding:25px;}
+.big-number {font-size:2.7rem; color:#f4f4f5; letter-spacing:-.05em;}
+.progress-bar {height:8px; background:#252b35; border-radius:4px;}
+.progress-fill {border-radius:4px; background:#8ac7e8;}
+.badges {gap:12px;}
+.badge {border-radius:10px; padding:20px 12px;}
+.badge-icon {font-size:1.8rem;}
+.locked {filter:grayscale(.85); opacity:.38;}
+#battlepass {background:#0d1118; border-top:1px solid #1f2530; border-bottom:1px solid #1f2530;}
+#battlepass .badge:not(.locked) {border-color:#5d6878; box-shadow:none; animation:none;}
+#games {background:transparent;}
+.game-stat {background:#171c25; border:1px solid #2b3340; border-radius:8px;}
+.timer {color:#fde68a;}
+.mission {text-align:left; background:#121720; border:1px solid #303744; border-radius:12px; padding:34px; max-width:850px; margin:0;}
+.mission h2 {font-size:2rem;}
+.notification {background:#171c25; border:1px solid #394352; border-radius:9px; box-shadow:0 12px 30px rgba(0,0,0,.25);}
+footer {border-top:1px solid #202631; background:#0a0d12;}
+@media(max-width:850px){nav{margin-top:10px;width:calc(100% - 20px)} .hero{padding-top:80px;padding-bottom:80px}.hero h1{font-size:clamp(3rem,18vw,5rem)} section{padding:60px 6%}}
+
 </style>
 </head>
 
@@ -914,16 +1000,13 @@ footer {
     <div class="hero-content">
 
         <div class="hero-badge">
-            🚀 Interactive AI Learning Portal
+            AI learning, built for high school
         </div>
 
         <h1>AI QUEST</h1>
 
         <p>
-            Learn how artificial intelligence works,
-            master powerful AI tools,
-            play educational games,
-            and become a responsible AI innovator.
+            Learn the basics of AI, practice writing better prompts, think through real ethical questions, and use what you learn to unlock challenges.
         </p>
 
         <div class="hero-buttons">
@@ -959,11 +1042,10 @@ footer {
 
     <div class="section-title">
 
-        <h2>Your AI Journey</h2>
+        <h2>Start here</h2>
 
         <p>
-            Learn new skills, earn XP,
-            unlock games, and climb the Battle Pass.
+            Work through three short modules. Each one adds XP and opens up more of the site.
         </p>
 
     </div>
@@ -994,7 +1076,7 @@ footer {
                 href="#foundations"
                 class="btn btn-primary">
 
-                Begin Mission
+                Start module
 
             </a>
 
@@ -1022,7 +1104,7 @@ footer {
                 href="#tools"
                 class="btn btn-primary">
 
-                Enter Prompt Lab
+                Try the lab
 
             </a>
 
@@ -1050,7 +1132,7 @@ footer {
                 href="#ethics"
                 class="btn btn-primary">
 
-                Make Decisions
+                View scenario
 
             </a>
 
@@ -1069,7 +1151,7 @@ footer {
 
     <div class="section-title">
 
-        <h2>🧠 Mission 1: AI Foundations</h2>
+        <h2>AI Foundations</h2>
 
         <p>
             Understand the technology behind
@@ -1181,7 +1263,7 @@ footer {
 
     <div class="section-title">
 
-        <h2>🛠️ Mission 2: Prompt Lab</h2>
+        <h2>Prompt Lab</h2>
 
         <p>
             Better instructions create better AI results.
@@ -1256,7 +1338,7 @@ footer {
 
     <div class="section-title">
 
-        <h2>⚖️ Mission 3: Ethical AI</h2>
+        <h2>Ethical AI</h2>
 
         <p>
             AI is powerful.
@@ -1340,7 +1422,7 @@ footer {
 
     <div class="section-title">
 
-        <h2>🎮 AI QUEST ARCADE</h2>
+        <h2>Arcade</h2>
 
         <p>
             Spend XP to enter challenges.
@@ -1506,7 +1588,7 @@ footer {
     <div class="section-title">
 
         <h2>
-            🎟️ AI QUEST BATTLE PASS
+            Battle Pass
         </h2>
 
         <p>
@@ -1708,7 +1790,7 @@ footer {
     <div class="section-title">
 
         <h2>
-            🏆 Your Progress Dashboard
+            Your progress
         </h2>
 
         <p>
@@ -1975,7 +2057,7 @@ footer {
 
 
         <h2>
-            Final AI Mission
+            Ready check
         </h2>
 
 
@@ -1989,7 +2071,7 @@ footer {
             class="btn btn-primary"
             onclick="checkFinalMission()">
 
-            Check My AI Readiness
+            Check progress
 
         </button>
 

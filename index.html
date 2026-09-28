@@ -13,7 +13,7 @@
 
 <body>
 
-    <!-- Background -->
+    <!-- Space Background -->
     <div class="space-scene" aria-hidden="true">
         <canvas id="starfield"></canvas>
         <div class="purple-moon"></div>
@@ -22,7 +22,7 @@
 
     <div class="shell">
 
-        <!-- Navigation -->
+        <!-- Header -->
         <header>
 
             <a class="brand" href="#top" aria-label="AETHER Home">
@@ -35,14 +35,9 @@
             </a>
 
             <nav aria-label="Main navigation">
-                <a href="#training">Training</a>
-                <a href="#missions">Missions</a>
-                <a href="#progress">Progress</a>
+                <a href="#about">About</a>
+                <a href="#game">Play Game</a>
             </nav>
-
-            <span class="header-xp" id="headerXp">
-                0 XP
-            </span>
 
         </header>
 
@@ -55,8 +50,8 @@
                 <div class="intro-text">
 
                     <div class="eyebrow">
-                        CADET TRAINING
-                        <span class="live">● ONLINE</span>
+                        OUTPOST 31
+                        <span class="live">● SIGNAL ACTIVE</span>
                     </div>
 
                     <h1>
@@ -66,18 +61,20 @@
 
                     <p>
                         Something strange is happening at Outpost 31.
-                        An emergency broadcast has interrupted normal communications,
-                        and ORACLE isn't giving you all the answers.
+                        An emergency broadcast has interrupted normal
+                        communications, and ORACLE isn't giving you all
+                        the answers.
                     </p>
 
                     <p>
-                        Complete your AI training, investigate the signal, and decide
-                        what information you can actually trust.
+                        Explore the station, investigate suspicious
+                        transmissions, and use what you know about
+                        artificial intelligence to uncover the truth.
                     </p>
 
-                    <a class="primary" href="#training">
-                        Start Training
-                        <span aria-hidden="true">→</span>
+                    <a class="primary" href="#game">
+                        Play AETHER
+                        <span aria-hidden="true">↓</span>
                     </a>
 
                 </div>
@@ -96,7 +93,7 @@
                             src="assets/oracle-camera.webp"
                             width="1312"
                             height="1199"
-                            alt=""
+                            alt="ORACLE station AI"
                             draggable="false"
                         >
 
@@ -115,192 +112,138 @@
             </section>
 
 
-            <!-- Progress -->
-            <section
-                class="dashboard"
-                id="progress"
-                aria-label="Player progress"
-            >
-
-                <div class="dashboard-item">
-                    <span class="mini">RANK</span>
-
-                    <strong id="rank">
-                        Recruit
-                    </strong>
-
-                    <span id="nextRank">
-                        250 XP to Cadet
-                    </span>
-                </div>
-
-
-                <div class="dashboard-item">
-                    <span class="mini">XP</span>
-
-                    <strong id="xp">
-                        0
-                        <small>/ 500 XP</small>
-                    </strong>
-
-                    <div class="bar">
-                        <span id="xpBar"></span>
-                    </div>
-                </div>
-
-
-                <div class="dashboard-item">
-                    <span class="mini">TRAINING</span>
-
-                    <strong id="trainingCount">
-                        0 / 6
-                    </strong>
-
-                    <span>
-                        Challenges completed
-                    </span>
-                </div>
-
-
-                <div class="dashboard-item">
-                    <span class="mini">MISSIONS</span>
-
-                    <strong id="missionCount">
-                        0 / 3
-                    </strong>
-
-                    <span>
-                        Levels completed
-                    </span>
-                </div>
-
-            </section>
-
-
-            <!-- Achievement message -->
-            <div
-                class="achievement"
-                id="moonAchievement"
-                role="status"
-                hidden
-            >
-
-                <span class="achievement-icon">
-                    ◈
-                </span>
-
-                <span>
-                    <strong>Moonrise Unlocked</strong>
-
-                    <small>
-                        You completed Level 1. The moon is now visible.
-                    </small>
-                </span>
-
-            </div>
-
-
-            <!-- Training -->
-            <section id="training" class="section">
+            <!-- About -->
+            <section id="about" class="section">
 
                 <div class="section-top">
 
                     <div>
                         <span class="eyebrow">
-                            01 / TRAINING
+                            THE MISSION
                         </span>
 
                         <h2>
-                            Prepare for the mission
+                            Welcome to Outpost 31
                         </h2>
                     </div>
 
                     <p>
-                        Work through each training module and answer the
-                        question at the end. Correct answers earn XP and
-                        help unlock the missions below.
+                        AETHER is an interactive deep-space experience
+                        that combines exploration, puzzles, and artificial
+                        intelligence.
                     </p>
 
                 </div>
 
+                <div class="about-game">
 
-                <!-- Training cards are created in app.js -->
-                <div id="modules" class="modules"></div>
+                    <div>
+                        <span class="mini">EXPLORE</span>
+
+                        <h3>Investigate the Station</h3>
+
+                        <p>
+                            Search Outpost 31 for clues and discover what
+                            happened before the emergency broadcast began.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span class="mini">QUESTION</span>
+
+                        <h3>Don't Trust Everything</h3>
+
+                        <p>
+                            Messages, images, and AI-generated information
+                            may not always be what they appear to be.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span class="mini">DECIDE</span>
+
+                        <h3>Make Your Choice</h3>
+
+                        <p>
+                            Use evidence and critical thinking to decide
+                            what information can be trusted.
+                        </p>
+                    </div>
+
+                </div>
 
             </section>
 
 
-            <!-- Missions -->
-            <section id="missions" class="section">
+            <!-- Unity Game -->
+            <section id="game" class="section game-section">
 
                 <div class="section-top">
 
                     <div>
                         <span class="eyebrow">
-                            02 / MISSIONS
+                            AETHER // UNITY WEBGL
                         </span>
 
                         <h2>
-                            Investigate Outpost 31
+                            Play AETHER
                         </h2>
                     </div>
 
                     <p>
-                        Your training gives you access to the first mission.
-                        Complete each level to continue deeper into the
-                        station's mystery.
+                        Enter Outpost 31 and begin your investigation.
                     </p>
 
                 </div>
 
 
-                <!-- Mission cards are created in app.js -->
-                <div
-                    id="missionCards"
-                    class="mission-grid"
-                ></div>
+                <div class="unity-wrapper">
 
+                    <!--
+                        UNITY GAME GOES HERE
 
-                <!-- Unity Game -->
-                <div
-                    id="player"
-                    class="player"
-                    hidden
-                >
+                        Replace this placeholder with the code generated
+                        by your Unity WebGL build.
+                    -->
 
-                    <div class="player-head">
+                    <div id="unity-container">
 
-                        <div>
-                            <span class="eyebrow">
-                                AETHER MISSION
-                            </span>
+                        <div id="unity-game">
 
-                            <h3 id="playerTitle"></h3>
+                            <div class="game-placeholder">
+
+                                <span class="mark">✳</span>
+
+                                <h2>AETHER</h2>
+
+                                <p>
+                                    Unity WebGL Game
+                                </p>
+
+                                <span class="game-status">
+                                    GAME BUILD GOES HERE
+                                </span>
+
+                            </div>
+
                         </div>
 
-                        <button
-                            class="close"
-                            id="closePlayer"
-                            type="button"
-                            aria-label="Close game"
-                        >
-                            ×
-                        </button>
-
                     </div>
 
-
-                    <!-- Unity WebGL game loads here -->
-                    <div
-                        id="gameMount"
-                        class="game-mount"
-                    ></div>
+                </div>
 
 
-                    <p
-                        id="gameHelp"
-                        class="game-help"
-                    ></p>
+                <div class="game-info">
+
+                    <span>
+                        UNITY WEBGL
+                    </span>
+
+                    <span>
+                        BEST PLAYED WITH KEYBOARD + MOUSE
+                    </span>
 
                 </div>
 
@@ -325,10 +268,9 @@
     </div>
 
 
-    <!-- JavaScript -->
+    <!-- Background + ORACLE -->
     <script src="space.js"></script>
     <script src="oracle-eye.js"></script>
-    <script src="app.js"></script>
 
 </body>
 
